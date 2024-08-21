@@ -18,7 +18,8 @@ export default async function RemoteMdxPage() {
       },
     });
     return <MDXRemote serialized={serialized} />;
-  } catch {
+  } catch (err) {
+    console.log("Error rendering", err);
     return <>Error</>;
   }
 }
