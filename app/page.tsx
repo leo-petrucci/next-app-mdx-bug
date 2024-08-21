@@ -5,6 +5,7 @@ export const revalidate = 60; // revalidate this page every 60 seconds
 
 export default async function RemoteMdxPage() {
   try {
+    console.log(process.env.VERCEL_URL);
     // MDX text - can be from a local file, database, CMS, fetch, anywhere...
     const res = await fetch(
       process.env.NODE_ENV === "production"
